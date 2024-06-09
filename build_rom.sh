@@ -19,11 +19,11 @@ crave clone create --projectID 73 /crave-devspaces/RR
 cd /crave-devspaces/RR
 
 # Sync and build
-crave run --no-patch -- "rm -rf .repo/local_manifests/; \
+crave run --no-patch -- "rm -rf .repo/local_manifests/ packages && platform; \
 repo init -u https://github.com/ResurrectionRemix/platform_manifest.git -b Q; \
 git clone https://github.com/strongreasons/local_manifest.git -b rr .repo/local_manifests; \
 /opt/crave/resync.sh; \
 . build/envsetup.sh; \
 lunch rr_X00TD-userdebug; \
-export TZ=Asia/Jakarta; \
+export TZ=Asia/Makassar; \
 mka bacon"; \
